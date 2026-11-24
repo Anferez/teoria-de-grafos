@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.npm-cache/
+.slidev/
+.pages-public/
+.env
+.env.*
+*.local
+*.log
+slidev-exported.*

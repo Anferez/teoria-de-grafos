@@ -1,0 +1,16 @@
+{
+  "name": "teoria-de-grafos",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build",
+    "build:pages": "slidev build --without-notes --router-mode hash",
+    "prepare:pages": "node scripts/prepare-pages.mjs"
+  },
+  "dependencies": {
+    "@slidev/cli": "53.1.0",
+    "vue": "^3.5.0"
+  }
+}

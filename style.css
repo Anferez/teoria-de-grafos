@@ -1,0 +1,684 @@
+:root {
+  --night: #101827;
+  --paper: #F7F8FC;
+  --blue: #5268F5;
+  --amber: #FFB15C;
+  --gray: #94A3B8;
+  --body: #3e4c63;
+  --line: #d9e0ed;
+  --blue-ink: #3349c5;
+}
+
+.slidev-layout {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: var(--paper);
+  color: var(--night);
+  padding: 43px 55px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.slidev-layout h1 {
+  margin: 0 0 24px;
+  font-size: 43px;
+  line-height: 1.08;
+  font-weight: 720;
+  letter-spacing: -0.045em;
+}
+
+.slidev-layout p { margin: 0; }
+
+.slidev-layout.cover {
+  position: relative;
+  isolation: isolate;
+  background: var(--night);
+  color: var(--paper);
+  padding: 48px 58px;
+}
+
+.cover .logo-colegio {
+  display: block;
+  width: 96px;
+  height: auto;
+  max-height: 112px;
+  object-fit: contain;
+  object-position: top left;
+}
+
+.cover h1 {
+  position: absolute;
+  left: 55px;
+  top: 177px;
+  z-index: 1;
+  font-size: 105px;
+  font-weight: 750;
+  line-height: 0.92;
+  letter-spacing: -0.065em;
+}
+
+.cover h1 span { color: #8596ff; }
+
+.cover-network {
+  position: absolute;
+  top: 26px;
+  right: 38px;
+  z-index: -1;
+  width: 475px;
+  height: 475px;
+}
+
+.cover-author {
+  position: absolute;
+  right: 58px;
+  bottom: 44px;
+  border-top: 1px solid #39465b;
+  padding-top: 11px;
+  color: #e1e8f4;
+  font-size: 20px;
+  text-align: right;
+  width: 184px;
+}
+
+.slidev-layout .objective-statement {
+  max-width: 830px;
+  border-left: 5px solid var(--blue);
+  border-radius: 0 10px 10px 0;
+  background: #e9edff;
+  padding: 25px 28px;
+  font-size: 31px;
+  font-weight: 620;
+  line-height: 1.32;
+  letter-spacing: -0.025em;
+}
+
+.slidev-layout .objective-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: 0;
+  margin: 34px 0 0;
+  list-style: none;
+}
+
+.objective-list li {
+  display: grid;
+  grid-template-rows: 36px auto;
+  justify-items: start;
+  gap: 12px;
+  min-height: 131px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.objective-list svg {
+  width: 34px;
+  height: 34px;
+  stroke: var(--blue-ink);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.objective-list svg circle { fill: #fff; }
+
+.relationship-table {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+}
+
+.relationship-table table {
+  margin: 0;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  font-size: 21px;
+}
+
+.relationship-table :is(th, td) {
+  height: 45px;
+  padding: 4px 8px;
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+
+.relationship-table tr > :last-child { border-right: 0; }
+.relationship-table tbody tr:last-child > * { border-bottom: 0; }
+.relationship-table thead th { background: #dce4ff; color: #203377; }
+.relationship-table tbody th { background: #edf1ff; color: #203377; }
+.relationship-table td { color: var(--body); }
+.relationship-table .is-diagonal { background: #f0f2f7; }
+.relationship-table .is-following { background: #e4eaff; color: #273baf; font-weight: 750; }
+
+.slidev-layout .slide-note {
+  margin-top: 21px;
+  padding-left: 14px;
+  border-left: 3px solid var(--blue);
+  color: var(--body);
+  font-size: 20px;
+  line-height: 1.42;
+}
+
+.graph-panel {
+  display: grid;
+  justify-items: center;
+  margin: 0;
+  padding: 8px 16px 10px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: radial-gradient(#dfe5f3 1px, transparent 1px) 0 0 / 19px 19px #fff;
+}
+
+.graph-panel svg { width: 100%; height: 278px; }
+.graph-edge { stroke: #64748b; stroke-width: 2.2; }
+.graph-example { stroke: #c47724; stroke-width: 3.2; }
+.graph-node ellipse { fill: #e1e8ff; stroke: var(--blue); stroke-width: 1.6; }
+.graph-node text { fill: #202f72; font-size: 22px; font-weight: 660; }
+
+.graph-panel figcaption {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #fff5e7;
+  color: #703c0d;
+  border-radius: 4px;
+  padding: 3px 11px;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.graph-panel figcaption span { font-size: 20px; line-height: 1; }
+
+.history-slide h1 { margin-bottom: 9px; }
+
+.slidev-layout .slide-subtitle {
+  color: var(--body);
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.history { position: relative; margin-top: 35px; }
+
+.history-axis {
+  position: absolute;
+  top: 42px;
+  left: 1px;
+  right: 1px;
+  border-top: 2px solid #aab8db;
+}
+
+.slidev-layout .history-milestones {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.history-milestones .milestone { margin: 0; min-width: 0; }
+
+.milestone time {
+  display: block;
+  height: 34px;
+  color: var(--blue-ink);
+  font-size: 23px;
+  font-weight: 750;
+  line-height: 1;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.history-dot {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin: 1px auto 13px;
+  border: 2px solid var(--paper);
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.milestone-card {
+  height: 258px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  transition: border-color 180ms ease;
+}
+
+.milestone-art {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 39px;
+  align-items: center;
+  height: 103px;
+  background: #eff2fa;
+}
+
+.milestone-art img {
+  width: 100%;
+  height: 103px;
+  object-fit: cover;
+  object-position: center 28%;
+  filter: grayscale(100%);
+}
+
+.milestone-art svg {
+  width: 34px;
+  margin-inline: auto;
+  fill: none;
+  stroke: var(--blue-ink);
+  stroke-width: 1.8;
+}
+
+.milestone-art circle { fill: #fff; }
+
+.milestone-card h2 {
+  min-height: 44px;
+  margin: 11px 8px 5px;
+  font-size: 18px;
+  font-weight: 750;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+
+.slidev-layout .milestone-card p {
+  margin: 0 8px;
+  color: var(--body);
+  font-size: 16px;
+  line-height: 1.24;
+}
+
+.milestone.slidev-vclick-current time { color: #8a4815; }
+.milestone.slidev-vclick-current .history-dot { background: var(--amber); box-shadow: 0 0 0 1px #a2591b; }
+.milestone.slidev-vclick-current .milestone-card { border-top-color: var(--amber); }
+
+.slidev-layout .portrait-credits {
+  display: block;
+  width: fit-content;
+  margin: 12px 0 0 auto;
+  color: #53627a;
+  font-size: 13px;
+}
+
+.graph-definition-slide .graph-definition {
+  max-width: 840px;
+  font-size: 30px;
+  line-height: 1.45;
+  color: var(--body);
+}
+
+.graph-definition-slide .graph-notation {
+  display: grid;
+  place-items: center;
+  min-height: 124px;
+  margin-top: 16px;
+  font-size: 47px;
+}
+
+.graph-notation .katex-display { margin: 0; }
+
+.graph-definition-slide .graph-symbols {
+  font-size: 24px;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--body);
+}
+
+.graph-symbols strong { color: var(--blue-ink); }
+
+.graph-uses-slide .graph-uses {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  gap: 30px 68px;
+  margin: 42px 0 0;
+}
+
+.graph-uses dt {
+  font-size: 25px;
+  font-weight: 720;
+  line-height: 1.2;
+}
+
+.graph-uses dd {
+  margin: 6px 0 0;
+  font-size: 21px;
+  line-height: 1.4;
+  color: var(--body);
+}
+
+.lesson-slide h1 { margin-bottom: 21px; }
+
+.lesson-slide .lesson-lead {
+  color: var(--body);
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+.lesson-slide > .lesson-lead { margin-bottom: 17px; }
+
+.lesson-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.03fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 27px;
+}
+
+.lesson-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 13px;
+  color: var(--body);
+  font-size: 20px;
+  line-height: 1.32;
+}
+
+.lesson-copy strong, .lesson-foot strong { color: var(--night); }
+
+.concept-list { gap: 14px; }
+
+.concept-list > p {
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.concept-list > p:first-child { padding-top: 0; border-top: 0; }
+
+.lesson-slide .lesson-aside,
+.lesson-slide .lesson-step {
+  padding: 9px 12px;
+  border-left: 3px solid #c37933;
+  border-radius: 0 5px 5px 0;
+  background: #fff2e4;
+}
+
+.lesson-slide .lesson-step { font-size: 19px; }
+.lesson-slide .lesson-step p, .lesson-slide .lesson-aside p { margin-top: 3px; }
+
+.lesson-slide .blue-step {
+  border-color: var(--blue);
+  background: #e9edff;
+}
+
+.lesson-slide .lesson-questions {
+  display: grid;
+  gap: 13px;
+  margin: 0;
+  padding-left: 24px;
+  list-style: decimal;
+}
+
+.lesson-questions > li {
+  margin: 0;
+  padding-left: 3px;
+  color: var(--night);
+}
+
+.lesson-slide .lesson-answer {
+  margin-top: 4px;
+  color: var(--blue-ink);
+  font-weight: 650;
+}
+
+.lesson-slide .lesson-foot {
+  color: var(--body);
+  font-size: 17px;
+  line-height: 1.34;
+}
+
+.lesson-slide > .lesson-foot { margin-top: 13px; }
+.lesson-slide .diagram-caption { margin-top: 9px; }
+
+.lesson-math {
+  color: var(--night);
+  font-size: 25px;
+}
+
+.lesson-math .katex-display { margin: 0.08em 0; }
+
+.lesson-diagram {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: radial-gradient(#dfe5f3 1px, transparent 1px) 0 0 / 18px 18px #fff;
+}
+
+.lesson-diagram svg { display: block; width: 100%; height: auto; }
+
+.lesson-edge {
+  fill: none;
+  stroke: #67758d;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  transition: d 360ms ease, stroke 180ms ease, stroke-width 180ms ease;
+}
+
+.lesson-edge.is-highlighted { stroke: #ad611d; stroke-width: 4; }
+.lesson-edge.is-secondary, .diagram-blue .lesson-edge.is-highlighted { stroke: var(--blue); stroke-width: 4; }
+.lesson-trace {
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 4.4;
+  stroke-linecap: round;
+  opacity: 0;
+  animation: trace-edge 350ms ease both;
+}
+
+@keyframes trace-edge {
+  from { opacity: 1; stroke-dasharray: 0 1; }
+  to { opacity: 1; stroke-dasharray: 1 0; }
+}
+
+.lesson-node { transition: transform 360ms ease; }
+.lesson-node circle { fill: #e5ebff; stroke: var(--blue); stroke-width: 1.8; }
+.lesson-node circle.is-visited { animation: visit-vertex 180ms ease both; }
+
+@keyframes visit-vertex {
+  from { fill: #e5ebff; }
+  to { fill: #beccff; }
+}
+
+.lesson-node text { fill: #203377; font-size: 22px; font-weight: 750; }
+.lesson-node.is-highlighted circle { fill: #ffdbb0; stroke: #ad611d; stroke-width: 2.5; }
+.lesson-node.is-highlighted text { fill: #63320e; }
+.lesson-weight rect { fill: #fff; stroke: #bcc6da; }
+.lesson-weight text { fill: var(--night); font-size: 18px; font-weight: 700; }
+.lesson-weight.is-highlighted rect { fill: #fff1df; stroke: #b16e2f; }
+.lesson-weight.is-secondary rect, .diagram-blue .lesson-weight.is-highlighted rect { fill: #e6ecff; stroke: var(--blue); }
+.diagram-faces polygon { fill: #e6ebff; }
+.diagram-faces polygon:nth-child(2) { fill: #fff0dc; }
+.diagram-faces text { fill: var(--body); font-size: 19px; font-weight: 700; text-anchor: middle; }
+
+.matrix-split { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.lesson-slide .matrix-split h2 {
+  margin: 0 0 8px;
+  color: var(--night);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.lesson-matrix {
+  width: 100%;
+  margin: 0;
+  table-layout: fixed;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  border-spacing: 0;
+  background: #fff;
+  overflow: hidden;
+  font-size: 20px;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+
+.lesson-matrix :is(th, td) {
+  box-sizing: border-box;
+  height: 39px;
+  padding: 4px 3px;
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+
+.lesson-matrix tr > :last-child { border-right: 0; }
+.lesson-matrix tbody tr:last-child > * { border-bottom: 0; }
+.lesson-matrix thead th { background: #dce4ff; color: #203377; }
+.lesson-matrix tbody th { background: #edf1ff; color: #203377; }
+.lesson-matrix td { color: var(--body); }
+.lesson-matrix .is-connection { font-weight: 700; color: var(--night); }
+.lesson-matrix .is-selected { background: #ffe4c2; color: #68370f; }
+.social-matrices th { font-size: 16px; }
+.social-matrices td { font-size: 19px; }
+.social-matrices .lesson-matrix :is(th, td) { height: 35px; }
+.social-result { position: relative; }
+.social-conversion {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 12px;
+}
+.social-conversion p {
+  display: grid;
+  grid-template-columns: 58px 32px 58px;
+  align-items: center;
+  text-align: center;
+  font-size: 23px;
+  color: var(--body);
+}
+.social-conversion :is(span:first-child, strong) {
+  padding: 4px 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+}
+.social-conversion strong { background: #e6ecff; color: var(--blue-ink); }
+.comparison-matrices .lesson-diagram { margin: 0 0 10px; }
+.comparison-matrices .lesson-diagram svg { height: 105px; }
+.comparison-matrices .lesson-matrix :is(th, td) { height: 34px; }
+.matrix-split .lesson-foot { margin-top: 9px; }
+.weighted-matrix > div { display: grid; gap: 2px; }
+.matrix-pair { display: grid; }
+.matrix-pair > p { grid-area: 1 / 1; }
+
+.lesson-problem .lesson-lead { font-size: 20px; }
+.lesson-problem .lesson-copy { gap: 9px; font-size: 17px; }
+.lesson-problem .lesson-questions { gap: 8px; }
+.lesson-problem .lesson-answer { margin-top: 2px; }
+.route-candidates { margin-top: 3px; font-weight: 650; }
+.route-amber { color: #824717; }
+.route-blue { color: var(--blue-ink); }
+
+.reveal-stack { display: grid; }
+.reveal-stack > * { grid-area: 1 / 1; align-self: start; }
+
+.lesson-slide .circuit-route {
+  color: var(--blue-ink);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.dense-title h1 { font-size: 38px; }
+
+.circuit-slide > .circuit-intro {
+  margin: -6px 0 16px;
+  color: var(--body);
+  font-size: 20px;
+}
+
+.circuit-slide .compact-copy { gap: 9px; font-size: 18px; line-height: 1.28; }
+.circuit-slide .compact-copy .lesson-step { font-size: 18px; }
+
+.circuit-degree .lesson-matrix :is(th, td) { height: 29px; font-size: 17px; }
+.circuit-degree .lesson-foot { margin-top: 5px; }
+.circuit-degree[data-balanced="true"] td { background: #e6ecff; color: var(--blue-ink); font-weight: 700; }
+
+.dirac-theorem {
+  margin-bottom: 16px;
+  padding: 9px 13px;
+  border-left: 3px solid var(--blue);
+  background: #e9edff;
+  font-size: 19px;
+  line-height: 1.3;
+}
+.dirac-slide .lesson-diagram { max-width: 400px; }
+
+.network-problem .lesson-split { grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); }
+.network-problem .lesson-questions { gap: 14px; font-size: 19px; }
+.network-solution h2 {
+  margin: 0 0 7px;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.network-solution .lesson-matrix :is(th, td) { height: 30px; font-size: 17px; }
+.network-explanations { margin-top: 11px; color: var(--body); font-size: 17px; line-height: 1.3; }
+
+.slidev-layout.lesson-closing {
+  position: relative;
+  isolation: isolate;
+  padding: 54px 62px;
+  background: var(--night);
+  color: var(--paper);
+}
+
+.lesson-closing h1 { font-size: 65px; margin-bottom: 23px; }
+.lesson-closing .closing-lead { max-width: 670px; font-size: 30px; line-height: 1.28; font-weight: 620; }
+.lesson-closing .closing-points {
+  display: grid;
+  gap: 11px;
+  max-width: 650px;
+  margin: 26px 0;
+  padding-left: 23px;
+  color: #e1e8f4;
+  font-size: 20px;
+  line-height: 1.33;
+}
+.closing-points li::marker { color: #94a2ff; }
+.lesson-closing .closing-question {
+  max-width: 670px;
+  padding: 10px 0 10px 15px;
+  border-left: 3px solid var(--amber);
+  color: #ffd3a7;
+  font-size: 23px;
+  font-weight: 650;
+  line-height: 1.32;
+}
+.closing-network {
+  position: absolute;
+  z-index: -1;
+  right: 16px;
+  bottom: 25px;
+  width: 310px;
+  opacity: 0.28;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-enter-active,
+  .fade-leave-active,
+  .slidev-vclick-target,
+  .milestone-card,
+  .lesson-edge,
+  .lesson-node { transition-duration: 0s !important; }
+  .lesson-trace { animation: none; opacity: 1; }
+  .lesson-node circle.is-visited { animation: none; fill: #beccff; }
+}
