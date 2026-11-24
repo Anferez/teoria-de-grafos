@@ -194,6 +194,31 @@ class: lesson-slide
 
 
 ---
+class: lesson-slide connectivity-slide
+---
+
+# Grafos conexos y desconexos
+
+<div class="lesson-split matrix-split">
+  <div>
+    <h2>Grafo conexo</h2>
+    <p class="lesson-foot connectivity-definition">Un grafo no dirigido es conexo cuando existe un camino entre cualquier par de vértices.</p>
+    <LessonGraph name="plane" :highlight="$clicks >= 1 ? ['AC','CD'] : []" :focus="$clicks >= 1 ? ['A','D'] : []" />
+    <p class="lesson-foot" v-click.fade-in="1">El camino destacado es <strong>A → C → D</strong>.</p>
+  </div>
+  <div v-click.fade-in="2">
+    <h2>Grafo desconexo</h2>
+    <p class="lesson-foot connectivity-definition">Un grafo es desconexo cuando existen al menos dos vértices entre los cuales no hay ningún camino.</p>
+    <LessonGraph name="disconnected" :highlight="$clicks >= 3 ? ['AB'] : []" :secondary="$clicks >= 3 ? ['CD'] : []" :focus="$clicks >= 3 ? ['A','D'] : []" />
+    <p class="lesson-foot" v-click.fade-in="3"><strong>No hay camino entre A y D.</strong></p>
+  </div>
+</div>
+
+<p class="lesson-foot">¿Podemos llegar desde cualquier vértice hasta todos los demás?</p>
+
+
+
+---
 class: lesson-slide
 ---
 

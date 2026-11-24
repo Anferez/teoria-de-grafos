@@ -84,6 +84,11 @@ export const lessonGraphs = {
     points: { A: [84, 52], B: [350, 52], C: [350, 242], D: [84, 242] },
     edges: [edge('A', 'B'), edge('B', 'C'), edge('C', 'D'), edge('D', 'A'), edge('A', 'C')],
   },
+  disconnected: {
+    vertices: four,
+    points: { A: [116, 72], B: [116, 229], C: [324, 72], D: [324, 229] },
+    edges: [edge('A', 'B'), edge('C', 'D')],
+  },
   complete: {
     vertices: four,
     points: { A: [67, 54], B: [367, 54], C: [367, 244], D: [67, 244] },

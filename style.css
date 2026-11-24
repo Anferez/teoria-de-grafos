@@ -508,6 +508,9 @@
 
 .matrix-split { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
+.connectivity-slide .lesson-diagram svg { height: 232px; }
+.connectivity-slide .connectivity-definition { min-height: 70px; margin: 0; }
+
 .lesson-slide .matrix-split h2 {
   margin: 0 0 8px;
   color: var(--night);
